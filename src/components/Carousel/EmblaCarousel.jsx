@@ -52,7 +52,7 @@ const EmblaCarousel = (props) => {
               key={index}
               onClick={() => onDotButtonClick(index)}
               className={styles.embla__dot.concat(
-                index === selectedIndex ? ` ${styles.embla__dot__selected}` : ''
+                index === selectedIndex ? ` ${styles['embla__dot--selected']}` : ''
               )}
             />
           ))}

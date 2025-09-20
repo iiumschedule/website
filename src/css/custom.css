@@ -17,6 +17,10 @@
   --ifm-color-primary-lightest: #c04e27;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Embla Carousel */
+  --detail-high-contrast: rgb(192, 192, 192);
+  --detail-medium-contrast: rgb(234, 234, 234);
+  --detail-low-contrast: rgb(240, 240, 242);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -29,4 +33,8 @@
   --ifm-color-primary-lighter: #f6cfc3;
   --ifm-color-primary-lightest: #fdf7f5;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Embla Carousel */
+  --detail-high-contrast: rgb(101, 101, 101);
+  --detail-medium-contrast: rgb(25, 25, 25);
+  --detail-low-contrast: rgb(21, 21, 21);
 }

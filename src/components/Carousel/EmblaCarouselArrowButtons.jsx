@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from 'react'
 import styles from './styles.module.css';
+import clsx from 'clsx';
 
 export const usePrevNextButtons = (emblaApi) => {
   const [prevBtnDisabled, setPrevBtnDisabled] = useState(true)
@@ -40,7 +41,7 @@ export const PrevButton = (props) => {
 
   return (
     <button
-      className={`${styles.embla__button} ${styles['embla__button--prev']}`}
+      className={clsx(styles.embla__button, `${styles['embla__button--prev']}`)}
       type="button"
       {...restProps}
     >
@@ -60,7 +61,7 @@ export const NextButton = (props) => {
 
   return (
     <button
-      className={`${styles.embla__button} ${styles['embla__button--next']}`}
+      className={clsx(styles.embla__button, `${styles['embla__button--next']}`)}
       type="button"
       {...restProps}
     >
