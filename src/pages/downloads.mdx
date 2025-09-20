@@ -1,0 +1,101 @@
+---
+title: Downloads
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import CodeBlock from '@theme/CodeBlock';
+import DownloadButtons from "@site/src/components/DownloadButtons/DownloadButtons";
+
+# Downloads
+
+IIUM Schedule app is available for multiple platforms. [(Release notes)](/changelog)
+
+![Platform logos](/img/platform-logos.png)
+
+## Android
+
+<Tabs
+    defaultValue="gplay"
+    values={[
+        {label: 'Google Play Store', value: 'gplay'},
+        {label: 'Sideload apk', value: 'apk'},
+    ]}>
+    <TabItem value="gplay">
+    <a href="https://play.google.com/store/apps/details?id=com.iqfareez.iiumschedule&utm_source=website&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1">
+    <img
+    alt="Get it on Google Play"
+    src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+    width="646"
+    height="250"/>
+    </a>
+    </TabItem>
+    <TabItem value="apk"><DownloadButtons filetype={".apk"}/>
+    </TabItem>
+
+</Tabs>
+
+## Windows
+
+<Tabs
+    defaultValue="winget"
+    values={[
+        {label: 'winget', value: 'winget'},
+        {label: 'exe', value: 'exe'},
+        {label: 'msix', value: 'msix'},
+    ]}>
+    <TabItem value="exe">
+        <DownloadButtons filetype={".exe"}/>
+    </TabItem>
+    <TabItem value="winget">
+        <blockquote> Windows Package Manager winget command-line tool is bundled with Windows 11 and modern versions of Windows 10 by default as the App Installer.</blockquote>
+        <CodeBlock language="powershell">winget install iiumschedule</CodeBlock>
+    </TabItem>
+    <TabItem value="msix">
+        <p>Before installing, please install the app certificate on your machine first. Follow the <a
+            href="../windows-cert">guide</a> here.</p>
+        <DownloadButtons filetype={".msix"}/>
+    </TabItem>
+</Tabs>
+
+## macOS
+
+<Tabs
+    defaultValue="brew"
+    values={[
+        {label: 'brew', value: 'brew'},
+        {label: 'dmg', value: 'dmg'},
+    ]}>
+    <TabItem value="dmg">
+        <DownloadButtons filetype={".dmg"}/>
+        <br/>
+        <p>
+            Installation step:
+            <ul>
+                <li>Open the downloaded dmg file.</li>
+                <li>Drag the app to the Applications folder.</li>
+            </ul>
+        </p>
+    </TabItem>
+    <TabItem value="brew">
+        <CodeBlock language="bash">brew tap iiumschedule/iiumschedule</CodeBlock>
+        <CodeBlock language="bash">brew install iiumschedule</CodeBlock>
+    </TabItem>
+</Tabs>
+
+## Web
+
+:::info Notice
+
+Web version support **has been dropped** (See details [here](https://github.com/iiumschedule/iium_schedule/issues/60)).
+It is recommended to use the app version as listed above instead. 
+
+Fortunately, there are few good alternatives that runs on the web:
+- **Simplified i-Ma'luum** by nrmnqdds: https://imaluum.quddus.my/
+- **ProReg** by Forthify: https://proreg.vercel.app/
+
+:::
+
+> **PWA ready**. The web app can be installed on your device.
+
+- https://iiumschedule.web.app

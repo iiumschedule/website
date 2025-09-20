@@ -4,14 +4,14 @@
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
-import {themes as prismThemes} from 'prism-react-renderer';
+import { themes as prismThemes } from 'prism-react-renderer';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'My Site',
-  tagline: 'Dinosaurs are cool',
+  title: 'IIUM Schedule Generator',
+  tagline: 'Generate your schedule easy peasy',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -27,8 +27,8 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'facebook', // Usually your GitHub org/user name.
-  projectName: 'docusaurus', // Usually your repo name.
+  organizationName: 'iiumschedule', // Usually your GitHub org/user name.
+  projectName: 'website', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -54,19 +54,17 @@ const config = {
             'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
+          routeBasePath: '/changelog',
+          blogTitle: 'Release Notes',
+          blogDescription: 'IIUM Schedule stable version release notes',
+          blogSidebarTitle: 'Release notes',
+          blogSidebarCount: 'ALL',
+          path: 'changelogs',
+          postsPerPage: 4,
+          showReadingTime: false,
           // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+            'https://github.com/iqfareez/iiumscwebsite/tree/master/changelog',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -78,24 +76,25 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
-        title: 'My Site',
+        title: 'IIUM Schedule',
         logo: {
-          alt: 'My Site Logo',
+          alt: 'IIUM Schedule Logo',
           src: 'img/logo.svg',
         },
         items: [
           {
             type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            sidebarId: 'mySidebar',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Guides',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
           {
-            href: 'https://github.com/facebook/docusaurus',
+            to: '/downloads', label: 'Downloads', position: 'left',
+          },
+          {
+            href: 'https://github.com/iiumschedule/iium_schedule',
             label: 'GitHub',
             position: 'right',
           },
@@ -108,25 +107,25 @@ const config = {
             title: 'Docs',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'Guides',
+                to: '/docs/extract',
+              },
+              {
+                label: 'Downloads',
+                to: '/downloads',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Legalese',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+                label: 'Privacy Policy',
+                to: 'privacy-policy',
               },
               {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/docusaurus',
-              },
-              {
-                label: 'X',
-                href: 'https://x.com/docusaurus',
+                label: 'Terms and Conditions',
+                to: 'terms',
               },
             ],
           },
@@ -134,17 +133,25 @@ const config = {
             title: 'More',
             items: [
               {
-                label: 'Blog',
-                to: '/blog',
+                label: 'Send feedback',
+                to: 'feedback'
               },
               {
-                label: 'GitHub',
-                href: 'https://github.com/facebook/docusaurus',
+                label: 'Release Notes',
+                to: '/changelog',
+              },
+              {
+                label: 'Devlog',
+                href: 'https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTAxOTkzNjUzNDk0NDQ3',
+              },
+              {
+                label: 'Branding',
+                to: '/branding',
               },
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+        copyright: '<div>Copyright © 2025 <a style="color: #bbe3ff" href="https://iqfareez.com">Muhammad Fareez</a></div>',
       },
       prism: {
         theme: prismThemes.github,
