@@ -15,15 +15,15 @@ tags: [v1.4.0, mac, minor]
 :::note Disclaimer
 
 Despite the screenshot above includes iPhone, IIUM Schedule is not available on iOS (not published to App Store).
-You can try deploying to your device on your own. 
+You can try deploying to your device on your own.
 
 :::
 
 ## New features
 
-- :sparkles: Added **highlight for current day** in schedule view. [#74](https://github.com/iqfareez/iium_schedule/issues/74)
-- :bento: Added support for **[themed icons](https://9to5google.com/2023/03/02/create-themed-icons-for-any-app/)** (Available on Android 13+). When themed icons is enabled from the system settings, the 
-app icon will follow the device themes.
+- :sparkles: Added **highlight for current day** in schedule view. [#74](https://github.com/iiumschedule/iium_schedule/issues/74)
+- :bento: Added support for **[themed icons](https://9to5google.com/2023/03/02/create-themed-icons-for-any-app/)** (Available on Android 13+). When themed icons is enabled from the system settings, the
+  app icon will follow the device themes.
   ![Screenshot themed icons](themed-icon.png)
 
 ## Other changes
@@ -32,4 +32,4 @@ app icon will follow the device themes.
   ![session sem screenshot selector](session-n-sem-default.png)
 - :lipstick: Fix some minor isues in UI
 
-[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqfareez/iium_schedule/releases/tag/1.4.0%2B39)
+[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iiumschedule/iium_schedule/releases/tag/1.4.0%2B39)

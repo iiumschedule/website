@@ -12,8 +12,8 @@ Few bug fixes and improvements including:
 - Update dependencies
 - Bump `compileSdkVersion` to 34 & Kotlin version to 1.9.10
 - Code Refactoring by [**@PlashSpeed-Aiman**](https://github.com/PlashSpeed-Aiman) in PR [#108](https://github.com/iiumschedule/iium_schedule/pull/108)
-    - Added services class to encapsulate logic
-    - Moved calendar function to dedicated utils folder
+  - Added services class to encapsulate logic
+  - Moved calendar function to dedicated utils folder
 - Update copyright year
 
-[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqfareez/iium_schedule/releases/tag/1.4.3%2B42)
+[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iiumschedule/iium_schedule/releases/tag/1.4.3%2B42)

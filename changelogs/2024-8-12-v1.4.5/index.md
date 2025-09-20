@@ -16,4 +16,4 @@ Bug fixes & improvements:
 - (Color Picker Sheet) Remove [flutter_colorpicker](https://pub.dev/packages/flutter_colorpicker) package
 - Remove unused reference to web
 
-[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqfareez/iium_schedule/releases/tag/1.4.5%2B44)
+[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iiumschedule/iium_schedule/releases/tag/1.4.5%2B44)

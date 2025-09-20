@@ -24,9 +24,9 @@ tags: [v1.1.1, patch]
 
 ## Known issues
 
-- While you can tap and hold the text you wanted to Copy, the option Copy will [not reappear](https://imgur.com/l123Cjw) _(bruh)_ when you resize the handler. This issue is tracked in [#68](https://github.com/iqfareez/iium_schedule/issues/68)
-- Icon on system's bottom navigation bar may not be visible in some phones. Tracked in [#70](https://github.com/iqfareez/iium_schedule/issues/70)
+- While you can tap and hold the text you wanted to Copy, the option Copy will [not reappear](https://imgur.com/l123Cjw) _(bruh)_ when you resize the handler. This issue is tracked in [#68](https://github.com/iiumschedule/iium_schedule/issues/68)
+- Icon on system's bottom navigation bar may not be visible in some phones. Tracked in [#70](https://github.com/iiumschedule/iium_schedule/issues/70)
 
 ---
 
-[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iqfareez/iium_schedule/releases/tag/1.1.1%2B23)
+[![GitHub Releases](https://img.shields.io/badge/view%20on%20github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iiumschedule/iium_schedule/releases/tag/1.1.1%2B23)
