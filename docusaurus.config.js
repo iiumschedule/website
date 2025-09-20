@@ -20,7 +20,7 @@ const config = {
   },
 
   // Set the production url of your site here
-  url: 'https://your-docusaurus-site.example.com',
+  url: 'https://iiumschedule.iqfareez.com',
   // Set the /<baseUrl>/ pathname under which your site is served
   // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: '/',
@@ -48,10 +48,8 @@ const config = {
       ({
         docs: {
           sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/iiumschedule/website/tree/main',
         },
         blog: {
           routeBasePath: '/changelog',
@@ -62,9 +60,8 @@ const config = {
           path: 'changelogs',
           postsPerPage: 4,
           showReadingTime: false,
-          // Please change this to your repo.
           editUrl:
-            'https://github.com/iqfareez/iiumscwebsite/tree/master/changelog',
+            'https://github.com/iiumschedule/website/tree/main',
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -76,7 +73,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'https://iiumschedule.vercel.app/img/meta-banner.png',
       navbar: {
         title: 'IIUM Schedule',
         logo: {
