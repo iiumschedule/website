@@ -47,16 +47,16 @@ console.table(Array.from(data.entries()));
 
 The **key** is what you supply to the Albiruni's `fetch` function.
 
-_As of 7/8/2024_, the kulliyyah available are as follows:
+_As of 9/10/2025_, the kulliyyah available are as follows:
 
-| (index) |   Key   | Value                                                   |
-| ------- | :-----: | ------------------------------------------------------- |
-| 0       | `IRKHS` | AHAS KIRKHS                                             |
+| (index) | Key     | Value                                                   |
+| ------- | ------- | ------------------------------------------------------- |
+| 0       | `AHAS`  | AHAS KIRKHS                                             |
 | 1       | `KAHS`  | ALLIED HEALTH SCIENCES                                  |
-| 2       |  `AED`  | ARCHITECTURE                                            |
+| 2       | `AED`   | ARCHITECTURE                                            |
 | 3       | `BRIDG` | BRIDGING PROGRAMME                                      |
-| 4       |  `CFL`  | CELPAD                                                  |
-| 5       | `CCAC`  | COCU                                                    |
+| 4       | `CFL`   | CELPAD                                                  |
+| 5       | `CCC`   | CCC                                                     |
 | 6       | `DENT`  | DENTISTRY                                               |
 | 7       | `EDUC`  | EDUCATION                                               |
 | 8       | `ENGIN` | ENGIN                                                   |
@@ -65,13 +65,13 @@ _As of 7/8/2024_, the kulliyyah available are as follows:
 | 11      | `IHART` | INTERNATIONAL INSTITUTE FOR HALAL RESEARCH AND TRAINING |
 | 12      | `IIBF`  | ISLAMIC BANKING AND FINANCE                             |
 | 13      | `ISTAC` | ISTAC                                                   |
-| 14      |  `KLM`  | KSTCL KLM                                               |
+| 14      | `KSTCL` | KSTCL                                                   |
 | 15      | `LAWS`  | LAWS                                                    |
 | 16      | `MEDIC` | MEDICINE                                                |
 | 17      | `NURS`  | NURSING                                                 |
 | 18      | `PHARM` | PHARMACY                                                |
 | 19      | `PLNET` | PLANETARY SURVIVAL FOR SUSTAINABLE WELL-BEING           |
-| 20      |  `KOS`  | SCIENCE                                                 |
+| 20      | `KOS`   | SCIENCE                                                 |
 | 21      | `SC4SH` | SEJAHTERA CENTRE FOR SUSTAINABILTY AND HUMANITY         |
 
 ## Alternative links
