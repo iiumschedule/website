@@ -3,6 +3,7 @@ import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import QuoteSection from '@site/src/components/QuoteSection/QuoteSection';
 import GetAppIcon from '@mui/icons-material/GetApp';
 
 import Heading from '@theme/Heading';
@@ -45,6 +46,7 @@ export default function Home() {
       <main>
         <HomepageFeatures />
       </main>
+      <QuoteSection />
     </Layout>
   );
 }

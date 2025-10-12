@@ -21,6 +21,8 @@
   --detail-high-contrast: rgb(192, 192, 192);
   --detail-medium-contrast: rgb(234, 234, 234);
   --detail-low-contrast: rgb(240, 240, 242);
+  /* Custom */
+  --card-bg: #f8f9fa;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -37,4 +39,6 @@
   --detail-high-contrast: rgb(101, 101, 101);
   --detail-medium-contrast: rgb(25, 25, 25);
   --detail-low-contrast: rgb(21, 21, 21);
+  /* Custom */
+  --card-bg: #232323;
 }
