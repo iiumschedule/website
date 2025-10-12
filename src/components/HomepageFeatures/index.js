@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Easy to Use',
-    image: require('@site/static/img/3dicons-flash-dynamic-color.png').default,
+    image: require('@site/static/img/3dicons-flash-dynamic-color-optim.png').default,
     description: (
       <>
         Designed from the ground up to be easily installed
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'Focus on What Matters',
-    image: require('@site/static/img/3dicons-target-dynamic-color.png').default,
+    image: require('@site/static/img/3dicons-target-dynamic-color-optim.png').default,
     description: (
       <>
         Your schedules and your future is what matters.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by Flutter',
-    image: require('@site/static/img/3dicons-thumb-up-dynamic-color.png').default,
+    image: require('@site/static/img/3dicons-thumb-up-dynamic-color-optim.png').default,
     description: (
       <>
         Multi-platform performant app. Easy access fom any devices. Which also means it is fast, reliable, and easy to use.
@@ -36,7 +36,7 @@ function Feature({ image, title, description }) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
-        <img src={image} className={styles.featureSvg} alt={title} />
+        <img src={image} className={styles.featureImage} alt={title} />
       </div>
       <div className="text--center padding-horiz--md">
         <h3>{title}</h3>
