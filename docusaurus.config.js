@@ -148,7 +148,7 @@ const config = {
             ],
           },
         ],
-        copyright: '<div>Copyright © 2025 <a style="color: #bbe3ff" href="https://iqfareez.com">Muhammad Fareez</a></div>',
+        copyright: '<div>Copyright © 2026 <a style="color: #bbe3ff" href="https://iqfareez.com">Muhammad Fareez</a></div>',
       },
       prism: {
         theme: prismThemes.github,
