@@ -41,6 +41,14 @@ const config = {
     locales: ['en'],
   },
 
+  scripts: [
+    {
+      src: 'https://umami.iqfareez.com/analitik.js',
+      defer: true,
+      'data-website-id': '02569e8f-e6db-4379-9799-d223d722bca1',
+    },
+  ],
+
   presets: [
     [
       'classic',
