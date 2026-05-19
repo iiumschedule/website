@@ -14,27 +14,28 @@
     "write-heading-ids": "docusaurus write-heading-ids"
   },
   "dependencies": {
-    "@docusaurus/core": "3.9.2",
-    "@docusaurus/preset-classic": "3.9.2",
-    "@docusaurus/theme-common": "^3.10.0",
+    "@docusaurus/core": "3.10.1",
+    "@docusaurus/faster": "^3.10.1",
+    "@docusaurus/preset-classic": "3.10.1",
+    "@docusaurus/theme-common": "^3.10.1",
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mdx-js/react": "^3.1.1",
-    "@mui/icons-material": "^7.3.9",
-    "@mui/material": "^7.3.9",
-    "axios": "^1.15.0",
+    "@mui/icons-material": "^7.3.11",
+    "@mui/material": "^7.3.11",
+    "axios": "^1.16.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "prism-react-renderer": "^2.4.1",
     "qrcode.react": "^4.2.0",
     "query-string": "^9.3.1",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "react-hook-form": "^7.72.1"
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6",
+    "react-hook-form": "^7.76.0"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.9.2",
-    "@docusaurus/types": "3.9.2"
+    "@docusaurus/module-type-aliases": "3.10.1",
+    "@docusaurus/types": "3.10.1"
   },
   "browserslist": {
     "production": [
