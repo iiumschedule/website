@@ -129,6 +129,19 @@ const config = {
             ],
           },
           {
+            title: 'Troubleshooting',
+            items: [
+              {
+                label: 'Windows install certificate',
+                to: '/windows-cert',
+              },
+              {
+                label: 'macos allow open app',
+                to: '/macos-allow-open-app',
+              }
+            ],
+          },
+          {
             title: 'Legalese',
             items: [
               {
