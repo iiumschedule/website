@@ -21,17 +21,17 @@
     "@emotion/react": "^11.14.0",
     "@emotion/styled": "^11.14.1",
     "@mdx-js/react": "^3.1.1",
-    "@mui/icons-material": "^7.3.11",
-    "@mui/material": "^7.3.11",
-    "axios": "^1.16.1",
+    "@mui/icons-material": "^9.1.1",
+    "@mui/material": "^9.1.2",
+    "axios": "^1.18.1",
     "clsx": "^2.1.1",
     "embla-carousel-react": "^8.6.0",
     "prism-react-renderer": "^2.4.1",
     "qrcode.react": "^4.2.0",
-    "query-string": "^9.3.1",
-    "react": "^19.2.6",
-    "react-dom": "^19.2.6",
-    "react-hook-form": "^7.76.0"
+    "query-string": "^9.4.0",
+    "react": "^19.2.7",
+    "react-dom": "^19.2.7",
+    "react-hook-form": "^7.80.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "3.10.1",
@@ -52,5 +52,5 @@
   "engines": {
     "node": ">=18.0"
   },
-  "packageManager": "pnpm@9.13.0+sha512.beb9e2a803db336c10c9af682b58ad7181ca0fbd0d4119f2b33d5f2582e96d6c0d93c85b23869295b765170fbdaa92890c0da6ada457415039769edf3c959efe"
+  "packageManager": "pnpm@11.9.0+sha512.bd682d5d03fe525ef7c9fd6780c6884d1e756ac4c9c9fe00c538782824310dcf90e3ddc4f53835f06dfaebd5085e41855e0bcbb3b60de2ac5bbab89e5036f03b"
 }
