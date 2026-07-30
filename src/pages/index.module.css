@@ -3,93 +3,101 @@
  * and scoped locally.
  */
 
-.heroBanner {
-  padding: 8rem 0 7rem;
-  text-align: left;
+.hero {
   position: relative;
   overflow: hidden;
+  background: var(--hp-page-bg);
+}
+
+/* Amber bloom bleeding down from above the fold. */
+.heroGlow {
+  top: -340px;
+  width: 900px;
+  height: 620px;
+}
+
+.heroInner {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 22px;
+  /* Deeper than the design's 76px: this takes over the removed pill's space. */
+  padding-top: 104px;
+  text-align: center;
 }
 
 .heroTitle {
-  font-size: clamp(2.2rem, 4vw + 1rem, 4rem);
-  line-height: 1.05;
-  letter-spacing: -0.02em;
+  margin: 0;
+  font-size: clamp(2.75rem, 6.2vw, 4.875rem);
+  font-weight: 700;
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+  max-width: 14em;
+  text-wrap: balance;
 }
 
 .heroSubtitle {
-  margin-top: 0.75rem;
-  font-size: clamp(1rem, 0.5vw + 1rem, 1.25rem);
-  opacity: 0.95;
+  margin: 0;
+  font-size: clamp(1.0625rem, 1.4vw, 1.25rem);
+  line-height: 1.6;
+  color: var(--hp-fg-muted);
+  max-width: 30em;
+  text-wrap: pretty;
 }
 
-.cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
+.heroActions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 4px;
 }
 
-.downloadIcon {
-  display: inline-flex;
+.heroMeta {
+  margin: 0;
+  letter-spacing: 0.04em;
 }
 
-.heroImageWrap {
-  position: relative;
-  min-height: 260px;
+/* Phone shell around the app screenshot. */
+.device {
+  width: 300px;
+  max-width: 72vw;
+  margin-top: 50px;
+  padding: 9px;
+  background: var(--hp-device-bg);
+  border: 1px solid var(--hp-device-border);
+  border-radius: 42px;
+  box-shadow: var(--hp-device-shadow);
 }
 
-.heroImage {
-  width: 100%;
-  max-width: 560px;
-  height: auto;
+.deviceScreen {
   display: block;
-  filter: drop-shadow(0 12px 28px rgba(0, 0, 0, 0.25));
-  transform: perspective(1000px) rotateY(-8deg) rotateX(2deg);
-  border-radius: 12px;
+  width: 100%;
+  height: auto;
+  border-radius: 34px;
 }
 
-.heroPattern {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -1px;
-  height: 64px;
-  background-image: radial-gradient(
-      color-mix(in srgb, var(--ifm-color-primary-lightest) 60%, transparent) 2px,
-      transparent 2px
-    );
-  background-size: 16px 16px;
-  background-position: center;
-  opacity: 0.6;
-  pointer-events: none;
-}
+@media screen and (max-width: 996px) {
+  .heroInner {
+    padding-top: 56px;
+    gap: 18px;
+  }
 
-@media screen and (max-width: 966px) {
-  .heroBanner {
-    padding: 3rem 1rem 2rem;
+  .heroTitle {
+    letter-spacing: -0.035em;
   }
-  .heroImage {
-    max-width: 420px;
-    margin: 1rem auto 0;
-    transform: none;
+
+  .heroActions {
+    align-self: stretch;
   }
-  .buttons {
+
+  .heroActions > :global(.hp-btn) {
+    flex: 1 1 220px;
     justify-content: center;
   }
-  .cta {
-    font-size: 0.95rem;
-    padding: 0.6em 1.2em;
-  }
-  .downloadIcon {
-    font-size: 1.2em;
-  }
-  .heroPattern {
-    display: none;
-  }
-}
 
-.buttons {
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-top: 1.25rem;
+  .device {
+    margin-top: 36px;
+  }
 }

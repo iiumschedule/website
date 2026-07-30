@@ -23,6 +23,35 @@
   --detail-low-contrast: rgb(240, 240, 242);
   /* Custom */
   --card-bg: #f8f9fa;
+
+  /* Homepage design tokens: light (design 4b) */
+  --hp-page-bg: #fafaf9;
+  --hp-surface: #ffffff;
+  --hp-border: #e7e5e4;
+  --hp-border-strong: #e4e4e7;
+  --hp-fg: #18181b;
+  --hp-fg-muted: #52525b;
+  --hp-fg-faint: #71717a;
+  --hp-accent: #d97706;
+  --hp-accent-text: #b45309;
+  --hp-glow: rgba(245, 158, 11, 0.22);
+  --hp-glow-mid: rgba(245, 158, 11, 0.05);
+  --hp-glow-end: rgba(245, 158, 11, 0);
+  --hp-grid-line: rgba(24, 24, 27, 0.045);
+  --hp-card-shadow: 0 1px 2px rgba(24, 24, 27, 0.05);
+  --hp-panel-shadow: none;
+  --hp-cta-bg: #18181b;
+  --hp-cta-fg: #fafaf9;
+  --hp-cta-shadow: 0 8px 24px rgba(24, 24, 27, 0.18);
+  --hp-ghost-bg: #ffffff;
+  --hp-ghost-border: #e4e4e7;
+  --hp-ghost-fg: #18181b;
+  --hp-device-bg: #ffffff;
+  --hp-device-border: #e4e4e7;
+  --hp-device-shadow: 0 30px 70px rgba(24, 24, 27, 0.16);
+  --hp-font-display: 'Albert Sans', var(--ifm-font-family-base);
+  --hp-font-label: 'Poppins', var(--ifm-font-family-base);
+  --hp-font-mono: 'DM Mono', var(--ifm-font-family-monospace);
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -41,4 +70,42 @@
   --detail-low-contrast: rgb(21, 21, 21);
   /* Custom */
   --card-bg: #232323;
+
+  /* Homepage design tokens: dark (design 4a) */
+  --hp-page-bg: #0a0a0c;
+  --hp-surface: rgba(255, 255, 255, 0.03);
+  --hp-border: rgba(255, 255, 255, 0.08);
+  --hp-border-strong: rgba(255, 255, 255, 0.1);
+  --hp-fg: #f4f4f5;
+  --hp-fg-muted: #a1a1aa;
+  --hp-fg-faint: #8b8b93;
+  --hp-accent: #fbbf24;
+  --hp-accent-text: #fbbf24;
+  --hp-glow: rgba(245, 158, 11, 0.2);
+  --hp-grid-line: rgba(255, 255, 255, 0.035);
+  --hp-card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  --hp-panel-shadow: none;
+  --hp-cta-bg: linear-gradient(180deg, #fbbf24, #f59e0b);
+  --hp-cta-fg: #1c1207;
+  --hp-cta-shadow: 0 10px 30px rgba(245, 158, 11, 0.28);
+  --hp-ghost-bg: rgba(255, 255, 255, 0.05);
+  --hp-ghost-border: rgba(255, 255, 255, 0.1);
+  --hp-ghost-fg: #f4f4f5;
+  --hp-device-bg: rgba(255, 255, 255, 0.05);
+  --hp-device-border: rgba(255, 255, 255, 0.1);
+  --hp-device-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.12), 0 40px 90px rgba(0, 0, 0, 0.6);
+}
+
+/*
+ * The homepage runs on the design's own page background (see design 4a/4b).
+ * Repointing Infima's background vars keeps the Docusaurus-owned navbar
+ * seamless with it, without touching any other route.
+ *
+ * Must target :root, not body, because Infima declares
+ * `--ifm-navbar-background-color: var(--ifm-background-surface-color)` on
+ * :root, so the substitution resolves against :root's value.
+ */
+html:has(.homepage-root) {
+  --ifm-background-color: var(--hp-page-bg);
+  --ifm-background-surface-color: var(--hp-page-bg);
 }

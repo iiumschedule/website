@@ -1,0 +1,81 @@
+.list {
+  overflow: hidden;
+}
+
+.item {
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--hp-border);
+  /* Infima styles bare <details>; this list draws its own container. */
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+}
+
+.question::-webkit-details-marker,
+.question::marker {
+  display: none;
+  content: '';
+}
+
+/* Infima's own details chevron. */
+.item > .question::before {
+  display: none;
+}
+
+.plus {
+  flex: none;
+  color: var(--hp-accent-text);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 180ms ease;
+}
+
+.item[open] .plus {
+  transform: rotate(45deg);
+}
+
+.answer {
+  margin: 12px 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--hp-fg-muted);
+  max-width: 46em;
+}
+
+.answerLink {
+  color: var(--hp-accent-text);
+  text-decoration: underline;
+}
+
+.answerLink:hover,
+.answerLink:focus-visible {
+  color: var(--hp-accent-text);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plus {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .item {
+    padding: 18px 20px;
+  }
+}

@@ -1,32 +1,61 @@
 .quoteSection {
-  margin: 3rem auto 2rem auto;
-  padding: 2rem 1rem;
-  max-width: 670px;
-  background: var(--card-bg);
-  border-radius: 1rem;
-  box-shadow: 0 2px 16px rgba(0,0,0,0.04);
-  text-align: center;
+  padding-top: 56px;
+}
+
+.card {
+  margin: 0;
+  padding: 44px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  border-radius: 20px;
 }
 
 .quote {
-  font-size: 1.1rem;
-  font-style: italic;
-  margin-bottom: 1rem;
-}
-
-.sourceContainer {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  font-size: clamp(1.25rem, 2.2vw, 1.625rem);
+  font-weight: 500;
+  line-height: 1.42;
+  letter-spacing: -0.02em;
+  text-wrap: pretty;
+  color: var(--hp-fg);
 }
 
 .source {
-  font-size: 1rem;
-  font-weight: 500;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
 }
 
 .logo {
-  width: 180px;
+  height: 40px;
+  width: auto;
   object-fit: contain;
+  display: block;
+}
+
+/*
+ * The wordmark is black ink plus brand red on transparent. Inverting it would
+ * turn the red cyan, so back it with a light chip instead and keep the
+ * brand colours intact.
+ */
+[data-theme='dark'] .logo {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 6px 10px;
+  box-sizing: content-box;
+}
+
+.articleLink {
+  display: inline-flex;
+}
+
+@media screen and (max-width: 996px) {
+  .card {
+    padding: 28px;
+  }
 }

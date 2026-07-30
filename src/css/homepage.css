@@ -1,0 +1,140 @@
+.homepage-root {
+  font-family: var(--hp-font-display);
+  color: var(--hp-fg);
+  /* Infima sets headings from this var, which beats plain inheritance. */
+  --ifm-heading-font-family: var(--hp-font-display);
+}
+
+/* Horizontal shell. The design canvas is 1080px wide with 40px gutters. */
+.hp-shell {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hp-section {
+  padding-top: 72px;
+}
+
+/* Small uppercase section label ("How it works", "FAQ"). */
+.hp-eyebrow {
+  font-family: var(--hp-font-label);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  /* Poppins is wider than the mono face this used to use, so tracking eases off. */
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hp-fg-faint);
+  margin-bottom: 22px;
+}
+
+/* Hairline panel used by the cards, stat strip, quote and FAQ list. */
+.hp-panel {
+  background: var(--hp-surface);
+  border: 1px solid var(--hp-border);
+  border-radius: 16px;
+  box-shadow: var(--hp-card-shadow);
+}
+
+.hp-mono {
+  font-family: var(--hp-font-mono);
+  font-size: 0.8125rem;
+  color: var(--hp-fg-faint);
+}
+
+/* Buttons */
+
+.hp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 12px;
+  padding: 15px 28px;
+  text-decoration: none;
+  transition: transform 160ms ease, box-shadow 160ms ease, opacity 160ms ease;
+}
+
+.hp-btn:hover,
+.hp-btn:focus-visible {
+  text-decoration: none;
+  transform: translateY(-1px);
+}
+
+.hp-btn--primary {
+  background: var(--hp-cta-bg);
+  color: var(--hp-cta-fg);
+  box-shadow: var(--hp-cta-shadow);
+}
+
+.hp-btn--primary:hover,
+.hp-btn--primary:focus-visible {
+  color: var(--hp-cta-fg);
+}
+
+.hp-btn--ghost {
+  background: var(--hp-ghost-bg);
+  color: var(--hp-ghost-fg);
+  border: 1px solid var(--hp-ghost-border);
+  font-weight: 400;
+  padding: 14px 26px;
+}
+
+.hp-btn--ghost:hover,
+.hp-btn--ghost:focus-visible {
+  color: var(--hp-ghost-fg);
+  border-color: var(--hp-accent);
+}
+
+/* Decorative amber bloom + graph-paper grid behind the hero and closing CTA. */
+.hp-glow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    closest-side,
+    var(--hp-glow),
+    var(--hp-glow-mid, rgba(245, 158, 11, 0.05)) 58%,
+    var(--hp-glow-end, rgba(245, 158, 11, 0)) 80%
+  );
+  pointer-events: none;
+}
+
+.hp-grid-lines {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(var(--hp-grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--hp-grid-line) 1px, transparent 1px);
+  background-size: 56px 56px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 40%, transparent 100%);
+  pointer-events: none;
+}
+
+@media screen and (max-width: 996px) {
+  .hp-shell {
+    padding: 0 20px;
+  }
+
+  .hp-section {
+    padding-top: 56px;
+  }
+
+  .hp-grid-lines {
+    background-size: 40px 40px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hp-btn {
+    transition: none;
+  }
+
+  .hp-btn:hover,
+  .hp-btn:focus-visible {
+    transform: none;
+  }
+}
