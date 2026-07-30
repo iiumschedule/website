@@ -27,7 +27,7 @@ export default function HomepageFeatures() {
         <h2 className="hp-eyebrow">How it works</h2>
         <div className={styles.steps}>
           {Steps.map(({ step, title, description }) => (
-            <div key={step} className={clsx('hp-panel', styles.step)}>
+            <div key={step} className={clsx('hp-panel', 'hp-reveal', styles.step)}>
               <div className={styles.stepNumber}>{step}</div>
               <h3 className={styles.stepTitle}>{title}</h3>
               <p className={styles.stepBody}>{description}</p>

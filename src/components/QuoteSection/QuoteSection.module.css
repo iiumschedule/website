@@ -52,6 +52,26 @@
 
 .articleLink {
   display: inline-flex;
+  transition: transform var(--hp-dur-base) var(--hp-ease-out),
+    opacity var(--hp-dur-base) ease;
+  opacity: 0.85;
+}
+
+.articleLink:hover,
+.articleLink:focus-visible {
+  transform: translateY(-2px);
+  opacity: 1;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .articleLink {
+    transition: none;
+  }
+
+  .articleLink:hover,
+  .articleLink:focus-visible {
+    transform: none;
+  }
 }
 
 @media screen and (max-width: 996px) {

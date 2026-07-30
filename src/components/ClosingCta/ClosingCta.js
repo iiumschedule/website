@@ -7,8 +7,8 @@ export default function ClosingCta() {
   return (
     <section className={styles.section}>
       <div className={clsx('hp-glow', styles.glow)} aria-hidden="true" />
-      <div className={clsx('hp-shell', styles.inner)}>
-        <p className={styles.headline}>Registration week is soon enough.</p>
+      <div className={clsx('hp-shell', 'hp-reveal', styles.inner)}>
+        <p className={styles.headline}>Jom Download. Dah nak start semester!</p>
         <Link className="hp-btn hp-btn--primary" to="/downloads">
           <GetAppIcon fontSize="small" aria-hidden="true" />
           Download free

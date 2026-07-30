@@ -34,6 +34,7 @@
   letter-spacing: -0.04em;
   line-height: 1.1;
   text-wrap: balance;
+  user-select: none;
 }
 
 @media screen and (max-width: 996px) {

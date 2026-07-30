@@ -10,10 +10,26 @@
   border-radius: 0;
   margin: 0;
   box-shadow: none;
+  transition: background-color var(--hp-dur-fast) ease;
 }
 
 .item:last-child {
   border-bottom: 0;
+}
+
+.item:hover {
+  background-color: var(--hp-row-hover);
+}
+
+.item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size var(--hp-dur-slow) var(--hp-ease-out),
+    content-visibility var(--hp-dur-slow) allow-discrete;
+}
+
+.item[open]::details-content {
+  block-size: auto;
 }
 
 .question {
@@ -25,6 +41,13 @@
   font-weight: 500;
   cursor: pointer;
   list-style: none;
+  /* Repeated clicking a summary otherwise selects the question text. */
+  user-select: none;
+  transition: color var(--hp-dur-fast) ease;
+}
+
+.question:hover {
+  color: var(--hp-accent-text);
 }
 
 .question::-webkit-details-marker,
@@ -43,11 +66,11 @@
   color: var(--hp-accent-text);
   font-size: 1.25rem;
   line-height: 1;
-  transition: transform 180ms ease;
+  transition: transform var(--hp-dur-base) var(--hp-ease-spring);
 }
 
 .item[open] .plus {
-  transform: rotate(45deg);
+  transform: rotate(135deg);
 }
 
 .answer {
@@ -56,20 +79,34 @@
   line-height: 1.65;
   color: var(--hp-fg-muted);
   max-width: 46em;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity var(--hp-dur-base) ease var(--hp-dur-fast),
+    transform var(--hp-dur-base) var(--hp-ease-out) var(--hp-dur-fast);
+}
+
+.item[open] .answer {
+  opacity: 1;
+  transform: none;
 }
 
 .answerLink {
   color: var(--hp-accent-text);
   text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: text-underline-offset var(--hp-dur-fast) ease;
 }
 
 .answerLink:hover,
 .answerLink:focus-visible {
   color: var(--hp-accent-text);
+  text-underline-offset: 4px;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .plus {
+  .plus,
+  .answer,
+  .item::details-content {
     transition: none;
   }
 }
