@@ -44,6 +44,9 @@
   /* Repeated clicking a summary otherwise selects the question text. */
   user-select: none;
   transition: color var(--hp-dur-fast) ease;
+  /* Extend the clickable summary over the item's own padding so the whole row toggles it. */
+  margin: -20px -26px;
+  padding: 20px 26px;
 }
 
 .question:hover {
@@ -113,6 +116,11 @@
 
 @media screen and (max-width: 996px) {
   .item {
+    padding: 18px 20px;
+  }
+
+  .question {
+    margin: -18px -20px;
     padding: 18px 20px;
   }
 }
