@@ -4,19 +4,18 @@ import styles from './styles.module.css';
 const Steps = [
   {
     step: '01',
-    title: 'Enter course codes',
-    description: 'Code and section per class. That is the entire input.',
+    title: 'Login to i-Ma\'luum',
+    description: 'It will read and extract your class schedule.',
   },
   {
     step: '02',
     title: 'Details auto-fill',
-    description: 'Venue, lecturer and time come from the published listing.',
+    description: 'The particulars (venue, days, etc) will be populated.',
   },
   {
     step: '03',
     title: 'Save and share',
-    description:
-      'Colour-code it, keep it offline, export an image for the group chat.',
+    description: 'Colour-code it, refer anytime. Can export to image as well.',
   },
 ];
 
