@@ -42,8 +42,7 @@
   box-shadow: var(--hp-card-shadow);
 }
 
-.hp-mono {
-  font-family: var(--hp-font-mono);
+.hp-caption {
   font-size: 0.8125rem;
   color: var(--hp-fg-faint);
 }

@@ -73,7 +73,7 @@ const config = {
   ],
 
   stylesheets: [
-    'https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Poppins:wght@600&family=DM+Mono:wght@400;500&display=swap',
+    'https://fonts.googleapis.com/css2?family=Albert+Sans:wght@400;500;600;700&family=Poppins:wght@600&display=swap',
   ],
 
 

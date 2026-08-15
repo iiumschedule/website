@@ -40,7 +40,7 @@ function HomepageHeader() {
           </Link>
         </div>
 
-        <p className={clsx('hp-mono', styles.heroMeta)}>
+        <p className={clsx('hp-caption', styles.heroMeta)}>
           Windows · Android · macOS
         </p>
 

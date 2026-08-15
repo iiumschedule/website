@@ -46,7 +46,6 @@
   --hp-ghost-fg: #18181b;
   --hp-font-display: 'Albert Sans', var(--ifm-font-family-base);
   --hp-font-label: 'Poppins', var(--ifm-font-family-base);
-  --hp-font-mono: 'DM Mono', var(--ifm-font-family-monospace);
 
   /* Interaction states: light */
   --hp-cta-veil: rgba(250, 250, 249, 0.16);
