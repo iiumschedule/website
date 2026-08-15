@@ -1,0 +1,125 @@
+.list {
+  overflow: hidden;
+}
+
+.item {
+  padding: 20px 26px;
+  border-bottom: 1px solid var(--hp-border);
+  /* Infima styles bare <details>; this list draws its own container. */
+  background: none;
+  border-radius: 0;
+  margin: 0;
+  box-shadow: none;
+  transition: background-color var(--hp-dur-fast) ease;
+}
+
+.item:last-child {
+  border-bottom: 0;
+}
+
+.item:hover {
+  background-color: var(--hp-row-hover);
+}
+
+.item::details-content {
+  block-size: 0;
+  overflow: hidden;
+  transition: block-size var(--hp-dur-slow) var(--hp-ease-out),
+    content-visibility var(--hp-dur-slow) allow-discrete;
+}
+
+.item[open]::details-content {
+  block-size: auto;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-size: 1.0625rem;
+  font-weight: 500;
+  cursor: pointer;
+  list-style: none;
+  user-select: none;
+  transition: color var(--hp-dur-fast) ease;
+  /* Extend the clickable summary so the whole row toggles it. */
+  margin: -20px -26px;
+  padding: 20px 26px;
+}
+
+.question:hover {
+  color: var(--hp-accent-text);
+}
+
+.question::-webkit-details-marker,
+.question::marker {
+  display: none;
+  content: '';
+}
+
+/* Infima's own details chevron. */
+.item > .question::before {
+  display: none;
+}
+
+.plus {
+  flex: none;
+  color: var(--hp-accent-text);
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform var(--hp-dur-base) var(--hp-ease-spring);
+}
+
+.item[open] .plus {
+  transform: rotate(135deg);
+}
+
+.answer {
+  margin: 12px 0 0;
+  font-size: 0.9375rem;
+  line-height: 1.65;
+  color: var(--hp-fg-muted);
+  max-width: 46em;
+  opacity: 0;
+  transform: translateY(-6px);
+  transition: opacity var(--hp-dur-base) ease var(--hp-dur-fast),
+    transform var(--hp-dur-base) var(--hp-ease-out) var(--hp-dur-fast);
+}
+
+.item[open] .answer {
+  opacity: 1;
+  transform: none;
+}
+
+.answerLink {
+  color: var(--hp-accent-text);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  transition: text-underline-offset var(--hp-dur-fast) ease;
+}
+
+.answerLink:hover,
+.answerLink:focus-visible {
+  color: var(--hp-accent-text);
+  text-underline-offset: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .plus,
+  .answer,
+  .item::details-content {
+    transition: none;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .item {
+    padding: 18px 20px;
+  }
+
+  .question {
+    margin: -18px -20px;
+    padding: 18px 20px;
+  }
+}

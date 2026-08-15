@@ -1,12 +1,71 @@
-.features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
 }
 
-.featureImage {
-  height: 180px;
-  width: 180px;
-  padding: 16px;
+.step {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 26px;
+  transition: background-color var(--hp-dur-base) ease,
+    border-color var(--hp-dur-base) ease;
+}
+
+/* Accent hairline that lights up along the top edge on hover. */
+.step::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--hp-accent), transparent);
+  opacity: 0;
+  transition: opacity var(--hp-dur-base) ease;
+}
+
+.step:hover {
+  background-color: var(--hp-surface-hover);
+  border-color: var(--hp-card-border-hover);
+}
+
+.step:hover::before {
+  opacity: 1;
+}
+
+.stepTitle {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.stepBody {
+  margin: 0;
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--hp-fg-muted);
+}
+
+/* Side-by-side cards enter the viewport together, so offsetting each one's
+   range staggers them instead of revealing the row as one block. */
+@supports (animation-timeline: view()) {
+  @media (prefers-reduced-motion: no-preference) {
+    .step:nth-child(2) {
+      animation-range: entry 14% cover 36%;
+    }
+
+    .step:nth-child(3) {
+      animation-range: entry 20% cover 42%;
+    }
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .steps {
+    grid-template-columns: 1fr;
+  }
 }

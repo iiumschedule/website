@@ -1,0 +1,164 @@
+.homepage-root {
+  font-family: var(--hp-font-display);
+  color: var(--hp-fg);
+  /* Infima sets headings from this var, which beats plain inheritance. */
+  --ifm-heading-font-family: var(--hp-font-display);
+  interpolate-size: allow-keywords;
+}
+
+.homepage-root ::selection {
+  background: var(--hp-selection-bg);
+}
+
+/* Horizontal shell. The design canvas is 1080px wide with 40px gutters. */
+.hp-shell {
+  width: 100%;
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+
+.hp-section {
+  padding-top: 72px;
+}
+
+/* Small uppercase section label ("How it works", "FAQ"). */
+.hp-eyebrow {
+  font-family: var(--hp-font-label);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--hp-fg-faint);
+  margin-bottom: 22px;
+  user-select: none;
+}
+
+/* Hairline panel used by the cards, stat strip, quote and FAQ list. */
+.hp-panel {
+  background: var(--hp-surface);
+  border: 1px solid var(--hp-border);
+  border-radius: 16px;
+  box-shadow: var(--hp-card-shadow);
+}
+
+.hp-caption {
+  font-size: 0.8125rem;
+  color: var(--hp-fg-faint);
+}
+
+/* Buttons */
+
+.hp-btn {
+  position: relative;
+  isolation: isolate;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 12px;
+  padding: 15px 28px;
+  text-decoration: none;
+  user-select: none;
+  transition: border-color var(--hp-dur-fast) ease;
+}
+
+.hp-btn::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  opacity: 0;
+  transition: opacity var(--hp-dur-fast) ease;
+}
+
+.hp-btn:hover::after,
+.hp-btn:focus-visible::after {
+  opacity: 1;
+}
+
+.hp-btn:hover,
+.hp-btn:focus-visible {
+  text-decoration: none;
+}
+
+.hp-btn:focus-visible {
+  outline: 2px solid var(--hp-accent);
+  outline-offset: 3px;
+}
+
+.hp-btn--primary {
+  background: var(--hp-cta-bg);
+  color: var(--hp-cta-fg);
+}
+
+.hp-btn--primary::after {
+  background: var(--hp-cta-veil);
+}
+
+.hp-btn--primary:hover,
+.hp-btn--primary:focus-visible {
+  color: var(--hp-cta-fg);
+}
+
+.hp-btn--ghost {
+  background: var(--hp-ghost-bg);
+  color: var(--hp-ghost-fg);
+  border: 1px solid var(--hp-ghost-border);
+  font-weight: 400;
+  padding: 14px 26px;
+}
+
+.hp-btn--ghost::after {
+  background: var(--hp-ghost-veil);
+}
+
+.hp-btn--ghost:hover,
+.hp-btn--ghost:focus-visible {
+  color: var(--hp-ghost-fg);
+  border-color: var(--hp-accent);
+}
+
+/* Decorative amber bloom behind the hero and closing CTA. */
+.hp-glow {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  background: radial-gradient(
+    closest-side,
+    var(--hp-glow),
+    var(--hp-glow-mid, rgba(245, 158, 11, 0.05)) 58%,
+    var(--hp-glow-end, rgba(245, 158, 11, 0)) 80%
+  );
+  pointer-events: none;
+}
+
+@keyframes hp-glow-breathe {
+  from {
+    opacity: 0.72;
+    transform: translateX(-50%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) scale(1.06);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hp-glow {
+    animation: hp-glow-breathe var(--hp-dur-ambient) ease-in-out infinite alternate;
+  }
+}
+
+@media screen and (max-width: 996px) {
+  .hp-shell {
+    padding: 0 20px;
+  }
+
+  .hp-section {
+    padding-top: 56px;
+  }
+}

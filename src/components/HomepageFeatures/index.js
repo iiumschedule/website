@@ -1,58 +1,32 @@
 import clsx from 'clsx';
 import styles from './styles.module.css';
 
-const FeatureList = [
+const Steps = [
   {
-    title: 'Easy to Use',
-    image: require('@site/static/img/3dicons-flash-dynamic-color-optim.png').default,
-    description: (
-      <>
-        Designed from the ground up to be easily installed
-        to get your schedule quickly and keeping track of your classes.
-      </>
-    ),
+    title: 'Login to i-Ma\'luum',
+    description: 'It will read and extract your class schedule.',
   },
   {
-    title: 'Focus on What Matters',
-    image: require('@site/static/img/3dicons-target-dynamic-color-optim.png').default,
-    description: (
-      <>
-        Your schedules and your future is what matters.
-      </>
-    ),
+    title: 'Details auto-fill',
+    description: 'The particulars (venue, days, etc) will be populated.',
   },
   {
-    title: 'Powered by Flutter',
-    image: require('@site/static/img/3dicons-thumb-up-dynamic-color-optim.png').default,
-    description: (
-      <>
-        Multi-platform performant app. Easy access fom any devices. Which also means it is fast, reliable, and easy to use.
-      </>
-    ),
+    title: 'Save and share',
+    description: 'Colour-code it, refer anytime. Can export to image as well.',
   },
 ];
 
-function Feature({ image, title, description }) {
-  return (
-    <div className={clsx('col col--4')}>
-      <div className="text--center">
-        <img src={image} className={styles.featureImage} alt={title} />
-      </div>
-      <div className="text--center padding-horiz--md">
-        <h3>{title}</h3>
-        <p>{description}</p>
-      </div>
-    </div>
-  );
-}
-
 export default function HomepageFeatures() {
   return (
-    <section className={styles.features}>
-      <div className="container">
-        <div className="row align-self">
-          {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+    <section className="hp-section">
+      <div className="hp-shell">
+        <h2 className="hp-eyebrow">How it works</h2>
+        <div className={styles.steps}>
+          {Steps.map(({ title, description }) => (
+            <div key={title} className={clsx('hp-panel', styles.step)}>
+              <h3 className={styles.stepTitle}>{title}</h3>
+              <p className={styles.stepBody}>{description}</p>
+            </div>
           ))}
         </div>
       </div>
