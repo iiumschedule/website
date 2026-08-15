@@ -36,14 +36,6 @@
   opacity: 1;
 }
 
-.stepNumber {
-  font-family: var(--ifm-font-family-base);
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: var(--hp-accent-text);
-  user-select: none;
-}
-
 .stepTitle {
   margin: 0;
   font-size: 1.25rem;
