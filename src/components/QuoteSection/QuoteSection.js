@@ -1,22 +1,20 @@
 import clsx from 'clsx';
 import styles from './QuoteSection.module.css';
 
-const ARTICLE_URL = 'https://news.iium.edu.my/?p=168911';
-
 export default function QuoteSection() {
     return (
         <section className={styles.quoteSection}>
             <div className="hp-shell">
                 <figure className={clsx('hp-panel', styles.card)}>
                     <blockquote className={styles.quote}>
-                        “...with IIUM Schedule Maker App, students will only need to fill
+                        “Students will only need to fill
                         in the course code and section for it to automatically fill up
-                        other information such as venue and lecturers’ names. The process
+                        other information such as venue and lecturers' names. The process
                         can be done with fewer clicks, thus improving productivity.”
                     </blockquote>
                     <figcaption className={styles.source}>
                         <a
-                            href={ARTICLE_URL}
+                            href={"https://news.iium.edu.my/?p=168911"}
                             target="_blank"
                             rel="noopener noreferrer"
                             className={styles.articleLink}>
