@@ -7,7 +7,7 @@ export default function QuoteSection() {
     return (
         <section className={styles.quoteSection}>
             <div className="hp-shell">
-                <figure className={clsx('hp-panel', 'hp-reveal', styles.card)}>
+                <figure className={clsx('hp-panel', styles.card)}>
                     <blockquote className={styles.quote}>
                         “...with IIUM Schedule Maker App, students will only need to fill
                         in the course code and section for it to automatically fill up

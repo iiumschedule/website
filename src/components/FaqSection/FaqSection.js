@@ -59,7 +59,7 @@ export default function FaqSection() {
     <section className="hp-section">
       <div className="hp-shell">
         <h2 className="hp-eyebrow">"Frequently" Asked Questions</h2>
-        <div className={clsx('hp-panel', 'hp-reveal', styles.list)}>
+        <div className={clsx('hp-panel', styles.list)}>
           {Faqs.map(({ question, answer }) => (
             <details key={question} className={styles.item}>
               <summary className={styles.question}>
