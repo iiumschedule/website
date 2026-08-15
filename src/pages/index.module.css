@@ -61,30 +61,21 @@
   user-select: none;
 }
 
-/* Phone shell around the app screenshot. */
 .device {
-  width: 300px;
-  max-width: 72vw;
+  width: 640px;
+  max-width: 88vw;
   margin-top: 50px;
-  padding: 9px;
-  background: var(--hp-device-bg);
-  border: 1px solid var(--hp-device-border);
-  border-radius: 42px;
-  box-shadow: var(--hp-device-shadow);
-  transition: transform var(--hp-dur-slow) var(--hp-ease-out),
-    box-shadow var(--hp-dur-slow) var(--hp-ease-out);
+  transition: transform var(--hp-dur-slow) var(--hp-ease-out);
 }
 
 .device:hover {
-  transform: translateY(-8px);
-  box-shadow: var(--hp-device-shadow-hover);
+  transform: translateY(-3px);
 }
 
 .deviceScreen {
   display: block;
   width: 100%;
   height: auto;
-  border-radius: 34px;
 }
 
 /*

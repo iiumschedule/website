@@ -47,10 +47,10 @@ function HomepageHeader() {
 
         <div className={styles.device}>
           <img
-            src={require('@site/static/img/app-timetable.jpg').default}
+            src={require('@site/static/img/schedule-hero-optim.png').default}
             alt="A week of classes laid out in the IIUM Schedule app"
-            width={1080}
-            height={2400}
+            width={1790}
+            height={1090}
             className={styles.deviceScreen}
           />
         </div>
