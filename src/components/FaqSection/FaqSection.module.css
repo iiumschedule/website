@@ -41,10 +41,9 @@
   font-weight: 500;
   cursor: pointer;
   list-style: none;
-  /* Repeated clicking a summary otherwise selects the question text. */
   user-select: none;
   transition: color var(--hp-dur-fast) ease;
-  /* Extend the clickable summary over the item's own padding so the whole row toggles it. */
+  /* Extend the clickable summary so the whole row toggles it. */
   margin: -20px -26px;
   padding: 20px 26px;
 }

@@ -6,7 +6,6 @@
   border-top: 1px solid var(--hp-border);
 }
 
-/* Bloom rising from the bottom edge, mirroring the hero's. */
 .glow {
   bottom: -260px;
   width: 760px;
