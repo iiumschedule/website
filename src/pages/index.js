@@ -17,7 +17,6 @@ function HomepageHeader() {
   return (
     <header className={styles.hero}>
       <div className={clsx('hp-glow', styles.heroGlow)} aria-hidden="true" />
-      <div className="hp-grid-lines" aria-hidden="true" />
 
       <div className={clsx('hp-shell', styles.heroInner)}>
         <Heading as="h1" className={styles.heroTitle}>

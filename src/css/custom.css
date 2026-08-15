@@ -37,7 +37,6 @@
   --hp-glow: rgba(245, 158, 11, 0.22);
   --hp-glow-mid: rgba(245, 158, 11, 0.05);
   --hp-glow-end: rgba(245, 158, 11, 0);
-  --hp-grid-line: rgba(24, 24, 27, 0.045);
   --hp-card-shadow: 0 1px 2px rgba(24, 24, 27, 0.05);
   --hp-panel-shadow: none;
   --hp-cta-bg: #18181b;
@@ -95,7 +94,6 @@
   --hp-accent: #fbbf24;
   --hp-accent-text: #fbbf24;
   --hp-glow: rgba(245, 158, 11, 0.2);
-  --hp-grid-line: rgba(255, 255, 255, 0.035);
   --hp-card-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.06);
   --hp-panel-shadow: none;
   --hp-cta-bg: linear-gradient(180deg, #fbbf24, #f59e0b);
