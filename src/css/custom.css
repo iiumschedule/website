@@ -24,7 +24,6 @@
   /* Custom */
   --card-bg: #f8f9fa;
 
-  /* Homepage design tokens: light (design 4b) */
   --hp-page-bg: #fafaf9;
   --hp-surface: #ffffff;
   --hp-border: #e7e5e4;
@@ -82,7 +81,6 @@
   /* Custom */
   --card-bg: #232323;
 
-  /* Homepage design tokens: dark (design 4a) */
   --hp-page-bg: #0a0a0c;
   --hp-surface: rgba(255, 255, 255, 0.03);
   --hp-border: rgba(255, 255, 255, 0.08);
