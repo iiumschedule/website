@@ -56,7 +56,6 @@ const config = {
     },
   ],
 
-  // Typefaces for the homepage design. Applied via --hp-font-* in custom.css.
   headTags: [
     {
       tagName: 'link',
