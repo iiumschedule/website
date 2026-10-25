@@ -1,0 +1,13 @@
+---
+title: v1.5.1
+authors: [fareez]
+description: Routine maintenance
+image: https://og-puce.vercel.app/api/og/iiumschedule2026?version=1.5.1
+tags: [v1.5.1, patch, security]
+---
+
+This update includes a critical TLS security fix that blocks compromised eMudhra certificates. 
+
+In October 2026, eight eMudhra intermediate CA certificates were [reported as compromised](https://emudhra.we-have-a-problem.com/), potentially allowing attackers to forge trusted HTTPS certificates. Although browsers and operating systems have [blocked these certificates](https://blog.google/security/protecting-chrome-and-android-users-from-compromised-emudhra-intermediate-ca-certificates/), Dart applications on Android, Windows, and some Linux environments require a separate fix because they use their [own TLS](https://groups.google.com/g/flutter-announce/c/0hNyXI3SSRk) certificate validation system.
+
+[![GitHub Releases](https://img.shields.io/badge/github%20releases-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)](https://github.com/iiumschedule/iium_schedule/releases/tag/1.5.1+54)
